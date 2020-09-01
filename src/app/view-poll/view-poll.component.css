@@ -1,0 +1,29 @@
+.view-poll-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+}
+
+.view-poll-item, .view-poll-selectable-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    width: 50%;
+    transform: scale(1);
+    transition: 250ms;
+}
+
+.view-poll-info-container {
+    margin-top: 24px;
+}
+
+.view-poll-results-container {
+    margin-top: 24px;
+    width: 50%;
+}
+
+.view-poll-selectable-item:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 250ms;
+}

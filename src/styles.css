@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Poppins&display=swap');
+
+:root {
+    --bg-blue-grey-800: #243B53;
+    --bg-blue-grey-700: #334E68;
+    --bg-blue-grey-500: #102A43;
+    --bg-blue-grey-400: #829AB1;
+    --bg-disabled: #191516;
+    --bg-primary: #C46BAE;
+    --text-disabled: rgba(80, 80, 80, 0.7);
+    --text-hint: rgba(256, 256, 256, 0.7);
+    --text-white: rgba(256, 256, 256, 0.85);
+
+}
+
+body {
+    background-color: var(--bg-blue-grey-500);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-white);
+}
+
+input {
+    background-color: var(--bg-blue-grey-700);
+    border: none;
+    color: var(--text-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    flex: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.button {
+    background-color: var(--bg-primary);
+    border-radius: 8px;
+    font-size: 18px;
+    margin: 16px;
+    padding: 8px 16px;
+    transform: scale(1);
+    transition: 250ms;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 250ms;
+}
+
+.card {
+    background-color: var(--bg-blue-grey-700);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+.disabled {
+    background-color: var(--bg-disabled);
+    color: var(--text-disabled);
+}
+
+.disabled:hover {
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.font-heading {
+    font-family: 'Alata', sans-serif;
+}
+
+.layout-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-heading {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.text-hint {
+    color: var(--text-hint);
+    font-size: 11px;
+}
+
+.text-subheading {
+    font-size: 24px;
+}
+
+.flex-centered {
+    justify-content: center;
+}
+
+.selected {
+    background-color: var(--bg-primary);
+}
+

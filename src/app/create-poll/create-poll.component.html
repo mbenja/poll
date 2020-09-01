@@ -1,0 +1,34 @@
+<div class="create-poll-container">
+    <div class="layout-row flex-centered">
+        <div class="card create-poll-item">
+            <div class="font-heading text-subheading">
+                Enter a name and three options to create a poll.
+            </div>
+        </div>
+    </div>
+    <div class="layout-row flex-centered">
+        <div class="card create-poll-item">
+            <input placeholder="Name goes here..." [(ngModel)]="name" />
+        </div>
+    </div>
+    <div class="layout-row flex-centered">
+        <div class="card create-poll-item">
+            <input placeholder="Option 1..." [(ngModel)]="option1" />
+        </div>
+    </div>
+    <div class="layout-row flex-centered">
+        <div class="card create-poll-item">
+            <input placeholder="Option 2..." [(ngModel)]="option2" />
+        </div>
+    </div>
+    <div class="layout-row flex-centered">
+        <div class="card create-poll-item">
+            <input placeholder="Option 3..." [(ngModel)]="option3" />
+        </div>
+    </div>
+    <div class="layout-row flex-centered">
+        <div [ngClass]="getCreatePollButtonClasses()" (click)="createPoll()">
+            Create
+        </div>
+    </div>
+</div>

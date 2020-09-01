@@ -1,0 +1,57 @@
+<div class="view-poll-container">
+    <div *ngIf="poll">
+        <div class="layout-row flex-centered">
+            <div class="card view-poll-item">
+                <div class="font-heading text-subheading">
+                    {{ poll.name }}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!hasVoted">
+            <div class="layout-row flex-centered">
+                <div [ngClass]="getSelectableItemClassesForOption(1)" (click)="selectOption(1)">
+                    {{ poll.optionOne }}
+                </div>
+            </div>
+            <div class="layout-row flex-centered">
+                <div [ngClass]="getSelectableItemClassesForOption(2)" (click)="selectOption(2)">
+                    {{ poll.optionTwo }}
+                </div>
+            </div>
+            <div class="layout-row flex-centered">
+                <div [ngClass]="getSelectableItemClassesForOption(3)" (click)="selectOption(3)">
+                    {{ poll.optionThree }}
+                </div>
+            </div>
+            <div class="layout-row flex-centered">
+                <div [ngClass]="getSubmitVoteButtonClasses()" (click)="selected ? submitVote() : null">
+                    Submit
+                </div>
+            </div>
+        </div>
+        <div *ngIf="hasVoted" class="layout-col">
+            <div class="layout-row flex-centered">
+                <div class="view-poll-results-container">
+                    <canvas baseChart
+                        [data]="pieChartData" 
+                        [labels]="pieChartLabels" 
+                        [chartType]="pieChartType"
+                        [options]="pieChartOptions"
+                        [plugins]="pieChartPlugins"
+                        [legend]="true">
+                    </canvas>
+                </div>
+            </div>
+            <div class="view-poll-info-container layout-row flex-centered">
+                <div class="text-hint">
+                    These results are live, no refresh needed.
+                </div>
+            </div>
+            <div class="layout-row flex-centered">
+                <div class="button" (click)="copyLink()">
+                    {{ shareButtonText }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

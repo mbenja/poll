@@ -1,0 +1,25 @@
+.header-container {
+    background-color: var(--bg-blue-grey-800);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header {
+    padding: 8px 16px;
+}
+
+.header:hover {
+    cursor: pointer;
+}
+
+.header-github-container {
+    margin: auto 16px auto 0;
+}
+
+.header-github {
+    height: 32px;
+    width: 32px;
+}
